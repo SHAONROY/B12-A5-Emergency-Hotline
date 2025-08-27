@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>B12-A5-Emergency-Hotline</title>
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./style.css" />
     <!-- Font Awesome CDN Link -->
     <link
       rel="stylesheet"
@@ -20,10 +22,9 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <header
-      class="flex justify-between items-center max-w-[1400px] mx-auto bg-white py-5 px-7"
-    >
+  <body class="hind-madurai-regular">
+    <!-- Start The Header Section -->
+    <header class="flex justify-between items-center bg-white py-5 px-16">
       <div class="flex justify-start items-center">
         <img class="w-12 h-12" src="./assets/logo.png" alt="" srcset="" />
         <div class="pl-3">
@@ -33,7 +34,7 @@
           </h2>
         </div>
       </div>
-      <div class="flex justify-start items-center">
+      <div class="flex justify-start items-center px-16">
         <div
           class="text-2xl text-white bg-[#41ff6b1a] flex justify-start items-center px-8 py-3 rounded-full mr-3"
         >
@@ -54,5 +55,26 @@
         </div>
       </div>
     </header>
+    <!-- End The Header Section -->
+    <!-- Start The hero Section -->
+    <section
+      class="mx-auto text-center bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]"
+    >
+      <div class="hero-container py-5">
+        <img
+          src="./assets/logo.png"
+          class="mx-auto w-[100px] h-[100px]"
+          alt=""
+        />
+        <h1 class="font-bold text-[40px] text-white py-3">
+          Emergency Service Directory
+        </h1>
+        <p class="font-semibold text-[20px] text-white">
+          Government Emergency Services at Your Fingertip – A Project by
+          Government of the People’s Republic of Bangladesh
+        </p>
+      </div>
+    </section>
+    <!-- End The hero Section -->
   </body>
 </html>
