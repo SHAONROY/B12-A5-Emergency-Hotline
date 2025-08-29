@@ -95,3 +95,4 @@ for (let k = 0; k < copyButton.length; k++) {
     updateCopyElement.innerText = copyCount;
   });
 }
+// End The Copy Function
