@@ -20,14 +20,17 @@ const clearHistoryBtn = document.getElementById("clear-history");
 for (let j = 0; j < CallButton.length; j++) {
   CallButton[j].addEventListener("click", function () {
     //  decrease The Coin Value
-    alert("Calling " + nationalName + " at " + nationalNumber);
-    coinCount = coinCount - 20;
-    updateCoinBtn.innerText = coinCount;
-    if (coinCount < 0) {
-      alert("Not enough coins to make a call!");
+    if (coinCount <= 0) {
+      alert(
+        "Not enough coins to make a call! you need at least 20 Coin to make this Call"
+      );
       updateCoinBtn.innerText = "0";
       return;
     }
+    alert("Calling " + nationalName + " at " + nationalNumber);
+    coinCount = coinCount - 20;
+    updateCoinBtn.innerText = coinCount;
+
     // Get current local time
     const currentTime = new Date();
     const timeString = currentTime.toLocaleTimeString("en-US", {
@@ -87,7 +90,7 @@ for (let k = 0; k < copyButton.length; k++) {
     const nationalNumber =
       document.querySelectorAll(".hotline-number")[k].innerText;
     navigator.clipboard.writeText(nationalNumber);
-    alert("Calling is Copy " + nationalNumber);
+    alert("The Number has Copied: " + nationalNumber);
     copyCount++;
     updateCopyElement.innerText = copyCount;
   });
