@@ -29,3 +29,49 @@
   font-weight: 700;
   font-style: normal;
 }
+/* History CSS */
+.history-parent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: #00000008;
+  margin: 0px 10px;
+  border-radius: 10px;
+}
+.national-name-element {
+  margin: 0px;
+  font-weight: bold;
+  color: #000;
+}
+.national-number-element {
+  margin: 0px;
+  color: #5c5c5c;
+}
+.current-time-element {
+  margin: 0px;
+  padding: 0px;
+  font-weight: bold;
+  color: #000;
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .card-container {
+    grid-column: span 12 / span 12;
+  }
+  .card-header {
+    grid-column: span 12 / span 12;
+  }
+  .card-history {
+    grid-column: span 12 / span 12;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .card-container {
+    grid-column: span 6 / span 6;
+  }
+}

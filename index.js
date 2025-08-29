@@ -1,8 +1,8 @@
 // Create a heard Function to click and update 1++
 
-var heartCount = 0;
-var hearts = document.querySelectorAll(".heart-btn");
-var updateHeart = document.getElementById("heard-increase");
+let heartCount = 0;
+const hearts = document.querySelectorAll(".heart-btn");
+const updateHeart = document.getElementById("heard-increase");
 for (let i = 0; i < hearts.length; i++) {
   hearts[i].addEventListener("click", function () {
     heartCount++;
@@ -28,10 +28,46 @@ for (let j = 0; j < CallButton.length; j++) {
       updateCoinBtn.innerText = "0";
       return;
     }
-    // Add history
-    var li = document.createElement("li");
-    li.innerText = nationalName + " - " + nationalNumber;
-    historyList.appendChild(li);
+    // Get current local time
+    const currentTime = new Date();
+    const timeString = currentTime.toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    });
+
+    // Create History Section
+    const outerDiv = document.createElement("div");
+
+    outerDiv.classList.add("history-parent");
+
+    const innerDiv1 = document.createElement("div");
+
+    const h4 = document.createElement("h4");
+    h4.innerText = nationalName;
+
+    h4.classList.add("national-name-element");
+    innerDiv1.appendChild(h4);
+
+    const p1 = document.createElement("p");
+    p1.innerText = nationalNumber;
+
+    p1.classList.add("national-number-element");
+    innerDiv1.appendChild(p1);
+
+    outerDiv.appendChild(innerDiv1);
+
+    const innerDiv2 = document.createElement("div");
+    const p2 = document.createElement("p");
+    p2.innerText = timeString;
+
+    p2.classList.add("current-time-element");
+    innerDiv2.appendChild(p2);
+
+    outerDiv.appendChild(innerDiv2);
+
+    let container = document.getElementById("history-list");
+    container.appendChild(outerDiv);
   });
 }
 // Clear History
