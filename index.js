@@ -84,7 +84,8 @@ const updateCopyElement = document.getElementById("copy-element");
 
 for (let k = 0; k < copyButton.length; k++) {
   copyButton[k].addEventListener("click", function () {
-    const nationalNumber = document.querySelector(".hotline-number").innerText;
+    const nationalNumber =
+      document.querySelectorAll(".hotline-number")[k].innerText;
     navigator.clipboard.writeText(nationalNumber);
     alert("Calling is Copy " + nationalNumber);
     copyCount++;
