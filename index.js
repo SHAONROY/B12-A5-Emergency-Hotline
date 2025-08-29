@@ -33,6 +33,7 @@ for (let j = 0; j < CallButton.length; j++) {
     const timeString = currentTime.toLocaleTimeString("en-US", {
       hour: "2-digit",
       minute: "2-digit",
+      second: "2-digit",
       hour12: true,
     });
 
@@ -74,3 +75,19 @@ for (let j = 0; j < CallButton.length; j++) {
 clearHistoryBtn.addEventListener("click", function () {
   historyList.innerHTML = "";
 });
+//  Add Copy Button Function
+let copyCount = 0;
+
+const copyButton = document.querySelectorAll(".copy-button");
+
+const updateCopyElement = document.getElementById("copy-element");
+
+for (let k = 0; k < copyButton.length; k++) {
+  copyButton[k].addEventListener("click", function () {
+    const nationalNumber = document.querySelector(".hotline-number").innerText;
+    navigator.clipboard.writeText(nationalNumber);
+    alert("Calling is Copy " + nationalNumber);
+    copyCount++;
+    updateCopyElement.innerText = copyCount;
+  });
+}

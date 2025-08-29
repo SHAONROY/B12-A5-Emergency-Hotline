@@ -29,6 +29,17 @@
   font-weight: 700;
   font-style: normal;
 }
+button {
+  cursor: pointer;
+}
+.copy-button:hover {
+  background-color: rgb(21, 28, 28);
+  color: white;
+}
+.call-btn:hover {
+  background-color: gray;
+  color: white;
+}
 /* History CSS */
 .history-parent {
   display: flex;
@@ -38,6 +49,7 @@
   background-color: #00000008;
   margin: 0px 10px;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 .national-name-element {
   margin: 0px;
